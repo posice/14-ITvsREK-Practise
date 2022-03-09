@@ -79,9 +79,9 @@ public class JustAClass {
     /**
      * Ein Klassiker und den rekursiv zu implementeirenden Methoden ist die Fibonacci-Zahlenfolge: 1, 1, 2, 3, 5, 8, 13, 21, ...
      * Hierbei gilt:
-     *    für n = 0 wird 1 zurückgegeben
      *    für n = 1 wird 1 zurückgegeben
-     *    für n > 1 wird fib(n-1) + fib(n-2) zurückgegeben.
+     *    für n = 2 wird 1 zurückgegeben
+     *    für n > 2 wird fib(n-1) + fib(n-2) zurückgegeben.
      * @param n
      * @return die n-te Fibonacci-Zahl
      */
