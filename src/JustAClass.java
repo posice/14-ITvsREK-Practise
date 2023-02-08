@@ -23,7 +23,11 @@ public class JustAClass {
      * @return
      */
     public int sumUpIt(int n){
-        return 0;
+        int result = 0;
+        for (int i = 0; i < n; i++){
+            result += i;
+        }
+        return result;
     }
 
     /**
@@ -33,7 +37,11 @@ public class JustAClass {
      * @return
      */
     public int sumUpRek(int n){
-        return 0;
+        int result = n;
+        if (n > 0){
+            result += sumUpRek(n-1);
+        }
+        return result;
     }
 
     /**
@@ -43,7 +51,11 @@ public class JustAClass {
      * @return
      */
     public int sumUpRandomIt(int n){
-        return 0;
+        int sum = 0;
+        for (int i = 0; i < n; i++){
+            sum += getRandom();
+        }
+        return sum;
     }
 
     /**
@@ -53,7 +65,12 @@ public class JustAClass {
      * @return
      */
     public int sumUpRandomRek(int n){
-        return 0;
+        int sum = 0;
+        if (n > 0){
+            sumUpRandomRek(n-1);
+        }
+        sum += getRandom();
+        return sum;
     }
 
     /**
@@ -63,7 +80,14 @@ public class JustAClass {
      * @return die größte zufällig Zahl, die im Verlauf der Methode erstellt wurde.
      */
     public int biggestOfRandomIt(int n){
-        return -1;
+        int biggest = 0;
+        for (int i = 0; i < n; i++){
+            int number = getRandom();
+            if (number > biggest){
+                biggest = number;
+            }
+        }
+        return biggest;
     }
 
     /**
@@ -73,7 +97,15 @@ public class JustAClass {
      * @return die größte zufällig Zahl, die im Verlauf der Methode erstellt wurde.
      */
     public int biggestOfRandomRek(int n){
-        return -1;
+        int last = 0;
+        if (n > 0){
+            last = biggestOfRandomRek(n-1);
+        }
+        int number = getRandom();
+        if (number < last){
+            number = last;
+        }
+        return number;
     }
 
     /**
@@ -86,6 +118,14 @@ public class JustAClass {
      * @return die n-te Fibonacci-Zahl
      */
     public int fib(int n){
-        return -1;
+        for (int i = 0; i < n; i++){
+            if (n == 1){
+                return 1;
+            } else if (n == 2){
+                return 2;
+            } else {
+                return fib(n - 1) + fib(n-2);
+            }
+        }
     }
 }
