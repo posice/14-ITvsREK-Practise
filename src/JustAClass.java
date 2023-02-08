@@ -80,7 +80,7 @@ public class JustAClass {
      * @return die größte zufällig Zahl, die im Verlauf der Methode erstellt wurde.
      */
     public int biggestOfRandomIt(int n){
-        int biggest = 0;
+        int biggest = -1;
         for (int i = 0; i < n; i++){
             int number = getRandom();
             if (number > biggest){
@@ -127,5 +127,6 @@ public class JustAClass {
                 return fib(n - 1) + fib(n-2);
             }
         }
+        return 0;
     }
 }
