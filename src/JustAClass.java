@@ -98,12 +98,13 @@ public class JustAClass {
      */
     public int biggestOfRandomRek(int n){
         int last = 0;
+        int number = -1;
         if (n > 0){
             last = biggestOfRandomRek(n-1);
-        }
-        int number = getRandom();
-        if (number < last){
-            number = last;
+            number = getRandom();
+            if (number < last){
+                number = last;
+            }
         }
         return number;
     }
